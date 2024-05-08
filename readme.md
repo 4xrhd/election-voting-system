@@ -50,7 +50,7 @@ This project is a command-line application developed in Python for managing elec
     ```
 3. Install dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirements.txt --break-system-packages
     ```
 ## Usage
 1. Run the program:
