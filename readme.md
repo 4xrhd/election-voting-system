@@ -10,9 +10,10 @@ This project is a command-line application developed in Python for managing elec
 
 - Add new candidates
 - Remove candidates
-- View list of candidates
+- View the list of candidates
 - Conduct voting
 - View voting results
+- View voters' info
 
 ## Screenshots
 
