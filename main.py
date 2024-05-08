@@ -16,7 +16,7 @@ try:
     voters_sheet = election_sheet.worksheet("Voters Data")
 except gspread.exceptions.WorksheetNotFound:
     # If the worksheet doesn't exist, create it
-    voters_sheet = election_sheet.add_worksheet(title="Voters Data", rows="100", cols="3")
+    voters_sheet = election_sheet.add_worksheet(title="Voters Data", rows="1000", cols="3")
    
 
 # Create headers if not exist
@@ -66,16 +66,16 @@ def give_vote():
         # Prompt for name with validation
         while True:
             voter_name = input("\nEnter your name: ")
-            if not (3 <= len(voter_name) <= 50 and voter_name.strip()):
-                print("Invalid name. Please enter a name between 3 and 50 characters.")
+            if not (4 <= len(voter_name) <= 50 and voter_name.strip()):
+                print("Invalid name(No Jal Vote). Please enter a name between 4 and 50 characters.")
             else:
                 break
 
         # Prompt for ID with validation
         while True:
-            voter_id = input("\nEnter your ID (10/17 digit): ")
+            voter_id = input("\nEnter your ID (10 or 17 digit): ")
             if not (voter_id.isdigit() and (len(voter_id) == 10 or len(voter_id) == 17)):
-                print("Invalid ID. Please enter a 10 or 17 digit ID.")
+                print("Invalid ID (are you bnp ;P ). Please enter a 10 or 17 digit ID.")
             else:
                 # Check if voter ID already exists in Voters Data sheet
                 voter_ids = voters_sheet.col_values(2)[1:]  # Get IDs from the second column, skipping the header
