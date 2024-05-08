@@ -62,14 +62,27 @@ def give_vote():
     if 1 <= choice <= len(candidates):
         cell = candidates_sheet.find(candidates[choice-1])
         candidates_sheet.update_cell(cell.row, 2, int(candidates_sheet.cell(cell.row, 2).value) + 1)
-        voter_name = input("\n Enter your name: ")
-        voter_id = input("\nEnter your ID: ")
         
-        # Check if voter ID already exists in Voters Data sheet
-        voter_ids = voters_sheet.col_values(2)[1:]  # Get IDs from the second column, skipping the header
-        if voter_id in voter_ids:
-            print("You have already cast your vote.")
-            return True
+        # Prompt for name with validation
+        while True:
+            voter_name = input("\nEnter your name: ")
+            if not (3 <= len(voter_name) <= 50 and voter_name.strip()):
+                print("Invalid name. Please enter a name between 3 and 50 characters.")
+            else:
+                break
+
+        # Prompt for ID with validation
+        while True:
+            voter_id = input("\nEnter your ID (10/17 digit): ")
+            if not (voter_id.isdigit() and (len(voter_id) == 10 or len(voter_id) == 17)):
+                print("Invalid ID. Please enter a 10 or 17 digit ID.")
+            else:
+                # Check if voter ID already exists in Voters Data sheet
+                voter_ids = voters_sheet.col_values(2)[1:]  # Get IDs from the second column, skipping the header
+                if voter_id in voter_ids:
+                    print("You have already cast your vote.")
+                    return True
+                break
 
         # Get the name of the candidate the voter voted for
         voted_candidate = candidates[choice - 1]
@@ -79,6 +92,7 @@ def give_vote():
     else:
         print("\nInvalid number of voter.")
     return True
+
 
 
 
@@ -164,7 +178,7 @@ def main():
             add_candidate()
         elif choice == '4':
             remove_candidate()
-        elif cshoice == '5':
+        elif choice == '5':
             election_result()
         elif choice == '6':
             voters_info()

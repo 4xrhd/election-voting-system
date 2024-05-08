@@ -60,5 +60,10 @@ This project is a command-line application developed in Python for managing elec
     ```
 2. Follow the on-screen instructions to navigate through the options and conduct the election process.
 
+## result here(access the spreadsheet)
+<a href="https://docs.google.com/spreadsheets/d/1569kCgYrLoM3Tn1VWPy2tLOEsA6vJ4HStdNkLR3W4us/"> show result</a>
+
+
+
 ## Credits
 This project was created by [the interviewee infront of you].
