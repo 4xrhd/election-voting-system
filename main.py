@@ -2,7 +2,7 @@ import gspread
 from tabulate import tabulate
 from oauth2client.service_account import ServiceAccountCredentials
 
-# Set up Google Sheets credentials
+# Set up google sheets credentials
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('access.json', scope)
@@ -39,6 +39,7 @@ def create_headers2(sheet):
 
 def display_menu():
     print("""
+
     Welcome to the voting system (choice 1-6):
 
     1. Give vote
@@ -46,7 +47,9 @@ def display_menu():
     3. Add Candidate
     4. Remove Candidate
     5. Election result
-    6. Exit
+    6. Show voter infos
+    7. Exit
+
     """)
 
 def give_vote():
@@ -121,7 +124,19 @@ def remove_candidate():
     
     return True
 
+##show voters infos
+def voters_info():
+    voters_data = voters_sheet.get_all_values()[1:]  # Get all rows except the header
+    if not voters_data:
+        print("No voters information available.")
+    else:
+        headers = ["Name", "ID", "Voted for"]
+        data = []
+        for voter in voters_data:
+            data.append([voter[0], voter[1], voter[2]])
+        print(tabulate(data, headers=headers, tablefmt="grid"))
 
+##show election result
 def election_result():
     candidates = candidates_sheet.col_values(1)[1:]  # Get candidate names from the first column, skipping the header
     result_table = []
@@ -140,7 +155,7 @@ def main():
     create_headers2(voters_sheet)  # Create headers if they don't exist
     while True:
         display_menu()
-        choice = input("Enter your choice (1-6): ")
+        choice = input("Enter your choice (1-7): ")
         if choice == '1':
             give_vote()
         elif choice == '2':
@@ -149,12 +164,14 @@ def main():
             add_candidate()
         elif choice == '4':
             remove_candidate()
-        elif choice == '5':
+        elif cshoice == '5':
             election_result()
         elif choice == '6':
+            voters_info()
+        elif choice == '7':
             break  # Exit the loop
         else:
-            print("Invalid choice. Please enter a number between 1 and 6.")
+            print("Invalid choice. Please enter a number between 1 and 7.")
         
         # Prompt for Enter to continue or F to exit
         choice = input("Press Enter to continue or 'F' to exit: ")
