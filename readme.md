@@ -40,18 +40,15 @@ This project is a command-line application developed in Python for managing elec
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/4xrhd/mypy/
-    
+   git clone https://github.com/4xrhd/election-voting-system/
     ```
 2. Navigate to the project directory:
 
     ```bash
-    cd mypy/project/election-voting-system/
-
+    cd election-voting-system/
     ```
 3. Install dependencies:
     ```bash
-
     pip install -r requirements.txt
     ```
 ## Usage

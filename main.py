@@ -54,16 +54,16 @@ def display_menu():
 
 def give_vote():
     candidates = candidates_sheet.col_values(1)[1:]  # Get candidate names from the first column, skipping the header
-    print("Candidates:")
+    print("Candidates:\n")
     for i, candidate in enumerate(candidates, 1):
         print(f"{i}. {candidate}")
 
-    choice = int(input("Enter the number of the candidate you want to vote for: "))
+    choice = int(input("\nEnter the number of the candidate you want to vote for: "))
     if 1 <= choice <= len(candidates):
         cell = candidates_sheet.find(candidates[choice-1])
         candidates_sheet.update_cell(cell.row, 2, int(candidates_sheet.cell(cell.row, 2).value) + 1)
-        voter_name = input("Enter your name: ")
-        voter_id = input("Enter your ID: ")
+        voter_name = input("\n Enter your name: ")
+        voter_id = input("\nEnter your ID: ")
         
         # Check if voter ID already exists in Voters Data sheet
         voter_ids = voters_sheet.col_values(2)[1:]  # Get IDs from the second column, skipping the header
@@ -77,7 +77,7 @@ def give_vote():
         voters_sheet.append_row([voter_name, voter_id, voted_candidate])
         print("\nVote successfully casted.")
     else:
-        print("\nInvalid choice.")
+        print("\nInvalid number of voter.")
     return True
 
 
