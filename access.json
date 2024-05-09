@@ -1,13 +1,3 @@
 {
-  "type": "service_account",
-  "project_id": "election-system-422617",
-  "private_key_id": "b9749ef6539b62a89f71030aeea747456483f0d2",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9TlRhZFKZmv7O\nXW12ltxkcHIKIvRT40GQo9GMsjngmckr5IrIXu1lcRLIzh5UzodIjL7Aw+R3XP4t\nsFzxAQE1xJXS8O5nX0X0dC7FMnL3mag0CxNXhLt2YfaPrrr1fwfpWpFnncoxGQD2\nAYwrAPWpJdtWsekltqwda48Zorkn2miLkYN7xPc4JEXgIAbWcpU9o6+mChv4p+xx\nH+akxtWWVhoMBqQ/Ta3ZD72B9t53PomedabCCC55wDZDgC997F4Y7RugyA9ZLhOR\nB8R4dYhD+UVZfEIfqdbvdb6kYIPwmr0hACH0FBC74jquYig5iC60pnmkCH8id0Oz\nEywVjrL3AgMBAAECggEAMhDHvzQtpkM4NXK/EviGFCgq+ORSsubs/ahdsLSoGu8B\nJdMdIy374fK8MZBVtD8kxzq17jxArZLSBFpa0kBeRg6WQ0IGAx/O2/5oKi4T+sjQ\nE+eD94b6ny38a/adqnSsrnoN75XrFf4TY3x4Sh1IWzJQZobJ7vf3YBaEs5Z2GoQz\n04WxvjOO8n3lNIo85nL+hN+BTXOcK8JYcKpVprpEVPDGs+wo/uBRnB/YjGvnS2AW\nNQbcou8KC7MdKhuo/Zu23RchYLPelgtA8nvw6vLpdcBPK2pwtp7eyfA5Hek/JFJu\nlTDsqI4JdJZZFfY8EpYt34crbXnOkSVInviSPNhaRQKBgQDj8vi2FWGoGyyBiHyr\ny7CcdHgQLchqURrREy1ln7KPFKhkefFeVqGrFHxTZGDMRpxVah5f/aL8XA+Kk1e2\nXVVHZyQwynvyWoLdouTQCx2/b51eEG1LweQ4JSXcnF02sYmeAVAwZwNzmXe4MEU8\nHjOI07SGRPBz98YDql5gMT5duwKBgQDUmf4J+vvdlVDN/PGyP5V+G9C0NvtuebC2\n23zbUoTq4M9lupHMtq2sMdgyESw73dtzdH4+mFOa5dXRrjYHzvBdsGdoGnqmKh3v\nshVnomB8PrafIYKjfcMtXCZ3msEYPlABias78pGEsDfAEkIVPH4qt2s2aPqbQ1Sy\nn3IGnk2N9QKBgQDN8jio8fpwUlTMl07kPDzNriDHpUWcYLiUyvnKBhXiVayqUs4z\nCJw6IGEPSvJ1vRoDxcO5wEOgM2DLN8IYfozM3TACcP65APOZYVHPcSuoSSRp1veY\naY5S96UUg6VoA9EtE0yq3nds2uwiWmJDJZoz9en1IZYJgIPDzgpEaFlLfwKBgF5t\n65UZQoegC50CrYPjlA3IYwG4riLasC/3+1QbKeh9ZAEmRh4sQaWLGiDa2c/ZceCt\nLGm3FONnFHqmq176fm7OrI9ju3hUmqldav518+8bl9fEdZcSg/+Av6E+Pmf7PWQB\nduoQiqvp7UlFks6F6PAmOduX8z/FPzh7c5UW+RGFAoGAOHEVw01sz52bECRqb4kH\nyB3qA+hC6EIUEyn70vCY5SP/zpkKq5ta1oCv8ud5kSCkw+LGCOk+OZ3Ws4gkzkcA\nruCH3VoWWdBmSMdv7WGyhhXOmWtYa5qeNLpgYhBBTj71ypuknbxucGraKAtNdlG+\ntnu1gOVPMkGmuoHubPXLuOw=\n-----END PRIVATE KEY-----\n",
-  "client_email": "election@election-system-422617.iam.gserviceaccount.com",
-  "client_id": "109778045072678116646",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/election%40election-system-422617.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
+ //follow cred.md
 }
